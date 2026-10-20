@@ -26,13 +26,13 @@ storage. Each product documents its required services and recovery coverage.
 | [KyIdentity](https://github.com/Busnes-app/KyIdentity-server#readme) | People, groups, application access, OpenID Connect sign-in, MFA and an app launcher. | Runs independently. Account email needs an SMTP sender; push MFA uses a paired authenticator. |
 | [KyPost](https://github.com/Busnes-app/KyPost-Server#readme) | Webmail, SMTP sending, folders, contacts, scheduled mail and OpenPGP, with optional local AI sorting. | Use an existing IMAP/SMTP mailbox. Native mailbox receiving is still in qualification; KyIdentity is optional. |
 | [KyNotes](https://github.com/Busnes-app/KyNotes-server#readme) | Browser-encrypted text and ink notebooks, attachments, tasks and team sharing. | Local administrator/everyday accounts or optional KyIdentity. Complete recovery needs the capsule and a separate encrypted-blob backup. |
-| [KyCalendar](https://github.com/Busnes-app/KyCalendar#readme) | Personal and group calendars in the browser and CalDAV clients, with per-device app passwords. | Local accounts/groups work independently. KyIdentity and KyPost invitation delivery are optional integrations. |
+| [KyCalendar](https://github.com/Busnes-app/KyCalendar#readme) | Personal and group calendars in the browser and CalDAV clients, with per-device app passwords. | Local accounts/groups work independently; KyIdentity is optional. AI agents connect over MCP with revocable tokens. Invitations through KyPost are not finished yet. |
 | [KyDrive](https://github.com/Busnes-app/kydrive-server#readme) | Permissioned workspaces, file/folder sharing, versions, trash, filename search and WebDAV; optional document editing and desktop sync. | Staff are provisioned through KyIdentity. Euro-Office is a separate optional editor. Recovery needs matching metadata and bulk snapshots. |
 | [KyMessages](https://github.com/Busnes-app/KyMessage-Server#readme) | A Matrix operator console and team chat stack, with encrypted rooms and optional calls. | The base image is a console. Chat needs Synapse, MAS, PostgreSQL, Element, KyIdentity and HTTPS; calls need the media setup. Evaluation and acceptance gates remain explicit. |
 | [KyRecovery](https://github.com/Busnes-app/KyRecovery-server#readme) | A blind store for sealed capsules, integrity/audit records, replication and restore planning. | Local operator sign-in or optional KyIdentity. Custodians hold the recovery shares; products restore outside the store. A capsule count is not a restore test. |
 | [KyYard](https://github.com/Busnes-app/KyYard-server#readme) | Docker/Kubernetes fleet inventory, container controls, logs, images and remote-agent enrollment. | Local accounts and MFA work independently. The default Docker socket mount grants host-level authority; suite management needs a runner handoff. |
 | [KyDNS](https://github.com/Busnes-app/KyDNS-server#readme) | Private DNS/service names, filtering, per-network views and replication; DHCP on supported installation paths. | Runs independently. Verify UDP/TCP DNS before switching clients; LAN-attached Compose does not support DHCP. |
-| [KyPulse](https://github.com/Busnes-app/KyPulse-server#readme) | Read-only health polling, log collection, audit activity and webhook alerts. | Local sign-in works independently. Add health sources and an alert receiver; KyYard adds container facts/logs. Monitoring reports problems; it does not repair them. |
+| [kyPulse](https://github.com/Busnes-app/KyPulse-server#readme) | Read-only health polling, log collection, audit activity and webhook alerts. | Local sign-in works independently. Add health sources and an alert receiver; KyYard adds container facts/logs. Monitoring reports problems; it does not repair them. |
 
 ## Native clients and authenticators
 
@@ -81,6 +81,8 @@ server scaffold; [ky-ui](https://github.com/Busnes-app/ky-ui) supplies the share
 
 ## Help and contributing
 
-Open an issue on the relevant product repository for bugs and setup questions. Report
+Ask setup questions, share what you run and suggest ideas in
+[Discussions](https://github.com/Busnes-app/.github/discussions). Open an issue on the relevant
+product repository for bugs. Report
 security problems privately through the [security policy](https://github.com/Busnes-app/.github/blob/main/SECURITY.md).
 For Busnes.app project enquiries, write to hello@busnes.app.
