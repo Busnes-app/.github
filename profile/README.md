@@ -59,8 +59,6 @@ storage. Each product documents its required services and recovery coverage.
   coding agent through selected installations and produces a handover and findings report.
   The report must distinguish completed, failed and blocked checks; an agent run is not a
   guarantee of working integrations or complete recovery.
-- **[ky-kubernetes](https://github.com/Busnes-app/ky-kubernetes#readme):** site-specific
-  deployment and migration reference, rather than a portable apply-everything installer.
 
 ## Readiness and recovery
 
