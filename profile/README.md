@@ -81,6 +81,11 @@ server scaffold; [ky-ui](https://github.com/Busnes-app/ky-ui) supplies the share
 
 ## Help and contributing
 
+Follow the [shared contribution policy](../CONTRIBUTING.md): major new
+functionality needs automated tests, and compiler/linter warnings must be fixed
+or documented as false positives. Product contributor guides provide the
+applicable setup and verification commands.
+
 Ask setup questions, share what you run and suggest ideas in
 [Discussions](https://github.com/Busnes-app/.github/discussions). Open an issue on the relevant
 product repository for bugs. Report
