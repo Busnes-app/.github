@@ -12,6 +12,8 @@ Own the public organization profile and shared contribution/security policies.
 
 ## Local Contracts
 
+- List the identity product as KyIdentity throughout the public profile and documentation.
+
 - Keep product capabilities and setup links grounded in their maintained repositories.
 - Shared policies apply to the Ky projects; they do not replace product security boundaries or verification commands.
 
